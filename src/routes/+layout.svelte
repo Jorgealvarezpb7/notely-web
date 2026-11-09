@@ -1,19 +1,20 @@
 <script lang="ts">
 	import '../app.css';
+	import { i18n } from '#lib/i18n/index.ts';
+	import { es } from '#lib/i18n/es.ts';
 	import { SITE_URL } from '#lib/site.ts';
 	import type { Snippet } from 'svelte';
 
 	let { children }: { children: Snippet } = $props();
 
-	const title = 'Notely · Notas adhesivas para macOS';
-	const description =
-		'Notas adhesivas flotantes para macOS. Nativa, de código abierto y gratis, con listas de tareas, un color para cada nota y sincronización con issues de GitHub.';
+	// Only the document title and description are localized so far.
+	const { title, description } = es.meta;
 	const socialImage = `${SITE_URL}/AppIcon.png`;
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
+	<title>{i18n.t.meta.title}</title>
+	<meta name="description" content={i18n.t.meta.description} />
 	<link rel="canonical" href={SITE_URL} />
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/AppIcon.png" />

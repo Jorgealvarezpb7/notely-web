@@ -1,4 +1,6 @@
-import type { PageLoad } from './$types';
+import type { EntryGenerator, PageLoad } from './$types';
+
+export const entries: EntryGenerator = () => [{}, { lang: 'en' }];
 
 const RELEASE_API_URL = 'https://api.github.com/repos/Jorgealvarezpb7/Notely/releases/latest';
 const RELEASE_TIMEOUT_MS = 8000;

@@ -8,7 +8,8 @@ export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit({
-			adapter: adapter({ pages: 'build', assets: 'build', strict: true }),
+			// Without a 404.html, Cloudflare Pages answers unknown paths with the home page.
+			adapter: adapter({ pages: 'build', assets: 'build', fallback: '404.html', strict: true }),
 			// Project code must use runes; dependencies keep their own mode.
 			dynamicCompileOptions: ({ filename }) =>
 				filename.includes('node_modules') ? undefined : { runes: true }

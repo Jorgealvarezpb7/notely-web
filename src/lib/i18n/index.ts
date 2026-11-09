@@ -13,9 +13,9 @@ export const DEFAULT_LOCALE: Locale = 'es';
 
 const dictionaries: Record<Locale, Dictionary> = { es, en };
 
-/** Maps the optional `[[lang=lang]]` route param to a locale. */
-export function localeFromParam(lang: string | undefined): Locale {
-	return lang === 'en' ? 'en' : DEFAULT_LOCALE;
+/** Reads the locale from the URL path, so unmatched routes like `/en/whatever` get one too. */
+export function localeFromPath(pathname: string): Locale {
+	return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : DEFAULT_LOCALE;
 }
 
 /** Builds the URL of the page, or of one of its sections, in the given locale. */

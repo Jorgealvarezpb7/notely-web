@@ -1,13 +1,25 @@
 <script lang="ts">
 	import Button from '#lib/components/atoms/Button.svelte';
 	import Icon from '#lib/components/atoms/Icon.svelte';
+	import LanguageSwitcher from '#lib/components/molecules/LanguageSwitcher.svelte';
+	import { i18n, localizedPath } from '#lib/i18n/index.ts';
 	import { DOWNLOAD_URL, REPO_URL } from '#lib/site.ts';
 
-	const links = [
-		{ href: '#funciones', label: 'Funciones', external: false },
-		{ href: '#instalacion', label: 'Instalación', external: false },
+	const t = $derived(i18n.t);
+
+	const links = $derived([
+		{
+			href: localizedPath(i18n.locale, 'features'),
+			label: t.header.features,
+			external: false
+		},
+		{
+			href: localizedPath(i18n.locale, 'install'),
+			label: t.header.install,
+			external: false
+		},
 		{ href: REPO_URL, label: 'GitHub', external: true }
-	];
+	]);
 
 	let menuOpen = $state(false);
 	let menuButton = $state<HTMLButtonElement>();
@@ -43,27 +55,36 @@
 <header
 	class="sticky top-0 z-10 border-b border-line bg-bg/70 backdrop-blur-xl backdrop-saturate-150"
 >
-	<div class="mx-auto flex max-w-5xl items-center justify-between gap-6 px-4 py-4 sm:px-6 sm:py-5">
-		<a href="/" class="flex items-center gap-3 text-lg font-semibold text-heading">
+	<div
+		class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5 md:gap-6"
+	>
+		<a
+			href={localizedPath(i18n.locale)}
+			class="flex items-center gap-3 text-lg font-semibold text-heading"
+		>
 			<span class="app-icon size-10">
 				<img src="/AppIcon_transparent_full_logo.png" alt="" width="40" height="40" />
 			</span>
 			Notely
 		</a>
 
-		<nav aria-label="Principal" class="ml-auto hidden sm:block">
-			{@render navLinks('flex gap-8 text-base text-heading', '')}
+		<nav aria-label={t.header.navLabel} class="ml-auto hidden sm:block">
+			{@render navLinks('flex gap-4 text-base text-heading md:gap-8', '')}
 		</nav>
 
+		<div class="hidden sm:block">
+			<LanguageSwitcher />
+		</div>
+
 		<div class="flex items-center gap-2">
-			<Button href={DOWNLOAD_URL}>Descargar</Button>
+			<Button href={DOWNLOAD_URL}>{t.header.download}</Button>
 			<button
 				bind:this={menuButton}
 				type="button"
 				class="rounded-lg p-2 text-heading focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:hidden"
 				aria-expanded={menuOpen}
 				aria-controls="menu-movil"
-				aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+				aria-label={menuOpen ? t.header.closeMenu : t.header.openMenu}
 				onclick={() => (menuOpen = !menuOpen)}
 			>
 				<Icon name={menuOpen ? 'x' : 'menu'} size={24} />
@@ -73,10 +94,13 @@
 
 	<nav
 		id="menu-movil"
-		aria-label="Principal"
+		aria-label={t.header.navLabel}
 		hidden={!menuOpen}
 		class="border-t border-line px-4 py-2 sm:hidden"
 	>
 		{@render navLinks('flex flex-col text-base text-heading', 'w-full py-3')}
+		<div class="py-3">
+			<LanguageSwitcher />
+		</div>
 	</nav>
 </header>

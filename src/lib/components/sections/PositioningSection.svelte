@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '#lib/components/atoms/Icon.svelte';
+	import { i18n } from '#lib/i18n/index.ts';
 </script>
 
 <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-32">
@@ -8,9 +9,7 @@
 			<Icon name="info" size={36} strokeWidth={1.5} />
 		</span>
 		<p class="text-xl leading-snug font-medium tracking-tight text-heading sm:text-3xl">
-			Notely no pretende ser tu app de notas definitiva. Es para lo rápido: esa idea, esa lista o
-			ese recordatorio que quieres tener delante mientras trabajas, flotando en tu escritorio hasta
-			que ya no lo necesites.
+			{i18n.t.positioning.text}
 		</p>
 	</div>
 </section>

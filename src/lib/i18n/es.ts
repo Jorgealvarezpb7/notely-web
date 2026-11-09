@@ -131,6 +131,12 @@ export const es = {
 	footer: {
 		madeBy: 'Hecho por',
 		license: 'Licencia MIT'
+	},
+	notFound: {
+		metaTitle: 'Página no encontrada · Notely',
+		heading: 'Esta nota se ha despegado',
+		message: 'La página que buscas no existe o se ha movido.',
+		home: 'Volver al inicio'
 	}
 } as const;
 

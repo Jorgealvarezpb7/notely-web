@@ -130,5 +130,11 @@ export const en: Dictionary = {
 	footer: {
 		madeBy: 'Made by',
 		license: 'MIT License'
+	},
+	notFound: {
+		metaTitle: 'Page not found · Notely',
+		heading: 'This note fell off',
+		message: "The page you're looking for doesn't exist or has moved.",
+		home: 'Back to home'
 	}
 };

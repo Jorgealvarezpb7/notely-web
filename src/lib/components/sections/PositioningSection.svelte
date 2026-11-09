@@ -4,6 +4,7 @@
 </script>
 
 <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-32">
+	<h2 class="sr-only">{i18n.t.positioning.heading}</h2>
 	<div class="flex items-start gap-5 rounded-card bg-surface p-7 sm:gap-8 sm:p-14">
 		<span class="shrink-0 text-heading">
 			<Icon name="info" size={36} strokeWidth={1.5} />

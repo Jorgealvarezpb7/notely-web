@@ -17,7 +17,7 @@
 >
 	<Badge>{t.badge}</Badge>
 	<span class="app-icon mx-auto mt-8 size-40 sm:size-48">
-		<img src="/AppIcon_transparent_full_logo.png" alt={t.iconAlt} width="192" height="192" />
+		<img src="/logo-384.png" alt={t.iconAlt} width="192" height="192" />
 	</span>
 	<h1 class="mx-auto mt-10 max-w-4xl text-hero font-bold text-heading">
 		{t.title}
@@ -36,7 +36,15 @@
 	<div class="mt-16 sm:mt-24">
 		<MacWindow>
 			{#if __HAS_HERO_SCREENSHOT__}
-				<img src="/screenshots/hero.png" alt={t.screenshotAlt} class="block h-auto w-full" />
+				<!-- Same 16:9 ratio as the placeholder below; update if the screenshot differs. -->
+				<img
+					src="/screenshots/hero.png"
+					alt={t.screenshotAlt}
+					width="1920"
+					height="1080"
+					loading="lazy"
+					class="block h-auto w-full"
+				/>
 			{:else}
 				<div class="flex aspect-video items-center justify-center p-6">
 					<p class="text-sm font-medium text-body">{t.screenshotPending}</p>

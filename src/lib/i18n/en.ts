@@ -2,9 +2,11 @@ import type { Dictionary } from '#lib/i18n/es.ts';
 
 export const en: Dictionary = {
 	meta: {
-		title: 'Notely · Sticky notes for macOS',
+		title: 'Notely: free, open-source sticky notes for macOS',
 		description:
-			'Free, open-source sticky notes that float on your Mac desktop. Native to macOS, with to-do lists, color-coded notes and GitHub issue sync.'
+			'Free, open-source sticky notes for macOS. Keep ideas on your desktop with floating notes, to-do lists, color coding and GitHub issue sync in a native app.',
+		ogImageAlt:
+			'Notely icon next to the text: Sticky notes for macOS. Native, open source and free.'
 	},
 	anchors: {
 		features: 'features',
@@ -31,6 +33,7 @@ export const en: Dictionary = {
 		screenshotPending: 'Screenshot coming soon'
 	},
 	positioning: {
+		heading: 'What Notely is for',
 		text: "Notely isn't meant to replace your notes app. It's for the quick stuff: the idea, list or reminder you want in front of you while you work, right there on your desktop until you're done with it."
 	},
 	features: {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon, { type IconName } from '#lib/components/atoms/Icon.svelte';
+	import { NEW_TAB } from '#lib/site.ts';
 
 	interface Props {
 		icon: IconName;
@@ -24,6 +25,7 @@
 {#if href}
 	<a
 		{href}
+		{...NEW_TAB}
 		class="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
 	>
 		{@render content()}

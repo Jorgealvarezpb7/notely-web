@@ -52,7 +52,7 @@ When the version is unavailable, the page SHALL omit only the version and its se
 
 #### Scenario: Version unavailable
 - **WHEN** the build could not obtain a version
-- **THEN** the line reads "macOS 14 o superior · Apple Silicon e Intel" and every download button remains present
+- **THEN** the line reads "macOS 14 o superior · Apple Silicon e Intel" on the Spanish page and "macOS 14 or later · Apple silicon and Intel" on the English page, and every download button remains present
 
 ### Requirement: No hand-edited version
 

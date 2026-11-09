@@ -3,7 +3,7 @@
 	import Icon from '#lib/components/atoms/Icon.svelte';
 	import LanguageSwitcher from '#lib/components/molecules/LanguageSwitcher.svelte';
 	import { i18n, localizedPath } from '#lib/i18n/index.ts';
-	import { DOWNLOAD_URL, REPO_URL } from '#lib/site.ts';
+	import { DOWNLOAD_URL, NEW_TAB, REPO_URL } from '#lib/site.ts';
 
 	const t = $derived(i18n.t);
 
@@ -39,6 +39,7 @@
 			<li>
 				<a
 					href={link.href}
+					{...link.external ? NEW_TAB : {}}
 					class="inline-flex items-center gap-1 hover:text-accent {linkClass}"
 					onclick={() => (menuOpen = false)}
 				>
@@ -63,7 +64,7 @@
 			class="flex items-center gap-3 text-lg font-semibold text-heading"
 		>
 			<span class="app-icon size-10">
-				<img src="/AppIcon_transparent_full_logo.png" alt="" width="40" height="40" />
+				<img src="/logo-80.png" alt="" width="40" height="40" />
 			</span>
 			Notely
 		</a>

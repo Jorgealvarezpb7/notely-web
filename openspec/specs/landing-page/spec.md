@@ -14,37 +14,37 @@ The page SHALL render its sections in this order: Header, Hero, Positioning, Fea
 - **WHEN** a visitor loads the page and scrolls from top to bottom
 - **THEN** the sections appear in the specified order
 
-### Requirement: Spanish copy
+### Requirement: Page language
 
-All visible UI copy SHALL be in Spanish, and the document language SHALL be declared as Spanish.
+The page SHALL be available in Spanish and English, with all visible copy in the language of the page, as defined by the `i18n` capability. Quoted labels below give the Spanish text and, where it matters, the English text.
 
-#### Scenario: Page language
-- **WHEN** the generated HTML is inspected
-- **THEN** the root element declares `lang="es"` and no visible section text is in English, apart from product names and terminal commands
+#### Scenario: One language per page
+- **WHEN** the generated HTML of a page is inspected
+- **THEN** no visible section text is in the other language, apart from product names and terminal commands
 
 ### Requirement: Download links
 
 Every download button SHALL link to `https://github.com/Jorgealvarezpb7/Notely/releases/latest/download/Notely.dmg`.
 
 #### Scenario: Download buttons
-- **WHEN** any "Descargar" or "Descargar para macOS" button is activated
+- **WHEN** any "Descargar", "Descargar para macOS", "Download" or "Download for Mac" button is activated
 - **THEN** the browser requests the latest-release `Notely.dmg` URL
 
 ### Requirement: Sticky header
 
-The header SHALL stay visible while scrolling and SHALL show the app icon, the name "Notely", links to Funciones, Instalación and GitHub, and a small "Descargar" button.
+The header SHALL stay visible while scrolling and SHALL show the app icon, the name "Notely", links to the features and install sections and to GitHub, a language switcher, and a small download button.
 
 #### Scenario: Header navigation
-- **WHEN** a visitor activates "Funciones" or "Instalación"
+- **WHEN** a visitor activates the features or install link
 - **THEN** the page moves to the matching section
 
 #### Scenario: GitHub link
 - **WHEN** a visitor activates "GitHub"
-- **THEN** the browser opens `https://github.com/Jorgealvarezpb7/Notely`
+- **THEN** the browser opens `https://github.com/Jorgealvarezpb7/Notely` in a new tab
 
 #### Scenario: Narrow viewport
 - **WHEN** the viewport is narrower than 640px
-- **THEN** the navigation links move behind a hamburger menu and the "Descargar" button stays visible outside it
+- **THEN** the navigation links and the language switcher move behind a hamburger menu and the download button stays visible outside it
 
 #### Scenario: Header on scroll
 - **WHEN** a visitor scrolls past the hero
@@ -52,7 +52,7 @@ The header SHALL stay visible while scrolling and SHALL show the app icon, the n
 
 ### Requirement: Hero content
 
-The hero SHALL show an "En desarrollo" badge, a large app icon, a one-line tagline stating sticky notes for macOS that are native, open source and free, a short intro, and a "Descargar para macOS" button.
+The hero SHALL show an "En desarrollo" / "In development" badge, a large app icon, a one-line tagline stating sticky notes for macOS that are native, open source and free, a short intro, and a "Descargar para macOS" / "Download for Mac" button.
 
 #### Scenario: Hero rendered
 - **WHEN** the page loads
@@ -60,11 +60,15 @@ The hero SHALL show an "En desarrollo" badge, a large app icon, a one-line tagli
 
 ### Requirement: Requirements line
 
-Below the main download button the hero SHALL show the release version, followed by "macOS 14 o superior · Apple Silicon e Intel".
+Below the main download button the hero SHALL show the release version, followed by "macOS 14 o superior · Apple Silicon e Intel" on the Spanish page and "macOS 14 or later · Apple silicon and Intel" on the English page.
 
-#### Scenario: Version known
-- **WHEN** the build obtained tag `v0.1.0`
+#### Scenario: Version known on the Spanish page
+- **WHEN** the build obtained tag `v0.1.0` and the Spanish page loads
 - **THEN** the line reads "v0.1.0 · macOS 14 o superior · Apple Silicon e Intel"
+
+#### Scenario: Version known on the English page
+- **WHEN** the build obtained tag `v0.1.0` and the English page loads
+- **THEN** the line reads "v0.1.0 · macOS 14 or later · Apple silicon and Intel"
 
 ### Requirement: Hero screenshot frame
 
@@ -108,10 +112,10 @@ The page SHALL include a demo slot after the features section that produces no v
 
 ### Requirement: Install steps
 
-The install section SHALL have the id `instalacion` and SHALL show three numbered steps, each with an icon: download, drag to Aplicaciones, open. Arrows SHALL show the flow between steps.
+The install section SHALL have the id `instalacion` on the Spanish page and `install` on the English page, and SHALL show three numbered steps, each with an icon: download, drag to the Applications folder, open. Arrows SHALL show the flow between steps.
 
 #### Scenario: Install steps rendered
-- **WHEN** a visitor reaches `#instalacion`
+- **WHEN** a visitor reaches the install section
 - **THEN** the three steps appear numbered, with icons, in that order
 
 #### Scenario: Wide viewport
@@ -124,7 +128,7 @@ The install section SHALL have the id `instalacion` and SHALL show three numbere
 
 ### Requirement: First-launch help
 
-The install section SHALL show a collapsible block titled "¿macOS no te deja abrirla?", closed by default, with a chevron that shows its state. Expanded, it SHALL explain, in a reassuring and honest tone, that the app is free and open source but not notarized by Apple, so macOS warns on first launch.
+The install section SHALL show a collapsible block titled "¿macOS no te deja abrirla?" / "Is macOS blocking Notely?", closed by default, with a chevron that shows its state. Expanded, it SHALL explain, in a reassuring and honest tone, that the app is free and open source but not notarized by Apple, so macOS warns on first launch.
 
 #### Scenario: Help block closed
 - **WHEN** a visitor reaches the install section
@@ -138,13 +142,21 @@ The install section SHALL show a collapsible block titled "¿macOS no te deja ab
 
 The help block SHALL give separate instructions for macOS 14 and for macOS 15 or later, using tabs or two columns.
 
-#### Scenario: macOS 14 instructions
-- **WHEN** a visitor reads the macOS 14 instructions
+#### Scenario: macOS 14 instructions in Spanish
+- **WHEN** a visitor reads the macOS 14 instructions on the Spanish page
 - **THEN** they say to Control-click (right-click) the app, choose Abrir, then Abrir again
 
-#### Scenario: macOS 15 or later instructions
-- **WHEN** a visitor reads the macOS 15 or later instructions
+#### Scenario: macOS 15 or later instructions in Spanish
+- **WHEN** a visitor reads the macOS 15 or later instructions on the Spanish page
 - **THEN** they say to try opening the app once, then go to Ajustes del Sistema, Privacidad y seguridad, and "Abrir igualmente"
+
+#### Scenario: macOS 14 instructions in English
+- **WHEN** a visitor reads the macOS 14 instructions on the English page
+- **THEN** they use the macOS labels "Control-click → Open", then say to click Open again
+
+#### Scenario: macOS 15 or later instructions in English
+- **WHEN** a visitor reads the macOS 15 or later instructions on the English page
+- **THEN** they say to try opening the app once, then use the macOS labels "System Settings → Privacy & Security → Open Anyway"
 
 ### Requirement: Quarantine fallback command
 
@@ -164,15 +176,51 @@ The open source section SHALL show a short text and cards linking to the GitHub 
 
 #### Scenario: Open source cards
 - **WHEN** a visitor activates each card
-- **THEN** the browser opens the repository, its new-issue page, and its releases page respectively
+- **THEN** the browser opens the repository, its new-issue page, and its releases page respectively, each in a new tab
 
 ### Requirement: Footer
 
-The footer SHALL show "Hecho por Jorge Álvarez" linking to `https://alvarezjorge.com`, a GitHub link, a "Licencia MIT" link to `https://github.com/Jorgealvarezpb7/Notely/blob/main/LICENSE`, and the current year.
+The footer SHALL show "Hecho por Jorge Álvarez" / "Made by Jorge Álvarez" linking to `https://alvarezjorge.com`, a GitHub link, a "Licencia MIT" / "MIT License" link to `https://github.com/Jorgealvarezpb7/Notely/blob/main/LICENSE`, and the current year.
 
 #### Scenario: Footer rendered
 - **WHEN** the page loads
 - **THEN** the footer shows all three links and the year
+
+### Requirement: Heading structure
+
+Each page SHALL have exactly one `h1`, in the hero. Each section SHALL have an `h2`, with `h3` for the items inside it and no skipped levels. The positioning section's `h2` SHALL be visually hidden.
+
+#### Scenario: Heading order
+- **WHEN** the generated HTML of a page is inspected
+- **THEN** it has one `h1` and no heading level is skipped
+
+### Requirement: Image attributes
+
+Images SHALL have explicit `width` and `height`. Meaningful images SHALL have translated alt text, and decorative images SHALL have an empty `alt`. Images below the fold SHALL use `loading="lazy"`, and the hero icon SHALL NOT.
+
+#### Scenario: Header logo
+- **WHEN** the header renders
+- **THEN** its logo has `alt=""` because the name "Notely" sits beside it
+
+#### Scenario: Hero icon
+- **WHEN** the hero renders
+- **THEN** the icon has translated alt text, explicit dimensions and no `loading="lazy"`
+
+#### Scenario: Hero screenshot
+- **WHEN** `static/screenshots/hero.png` exists at build time
+- **THEN** the image has explicit dimensions and `loading="lazy"`
+
+### Requirement: External links
+
+Links that leave the site SHALL open in a new tab with `rel="noopener"`. Download links SHALL stay in the same tab.
+
+#### Scenario: External link
+- **WHEN** the generated HTML of a page is inspected
+- **THEN** every external link except the downloads has `target="_blank"` and `rel="noopener"`
+
+#### Scenario: Download link
+- **WHEN** the generated HTML of a page is inspected
+- **THEN** the download links have no `target="_blank"`
 
 ### Requirement: Responsive layout
 

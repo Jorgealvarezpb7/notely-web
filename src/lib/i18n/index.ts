@@ -9,7 +9,7 @@ export type Anchor = keyof Dictionary['anchors'];
 /** Each language named in itself, so it reads the same on every page. */
 export const LOCALE_NAMES: Record<Locale, string> = { es: 'Español', en: 'English' };
 
-const DEFAULT_LOCALE: Locale = 'es';
+export const DEFAULT_LOCALE: Locale = 'es';
 
 const dictionaries: Record<Locale, Dictionary> = { es, en };
 

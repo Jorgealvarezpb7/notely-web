@@ -1,9 +1,11 @@
 /** Source of truth for the copy. Every other locale is typed against this shape. */
 export const es = {
 	meta: {
-		title: 'Notely · Notas adhesivas para macOS',
+		title: 'Notely: notas adhesivas gratis y de código abierto en macOS',
 		description:
-			'Notas adhesivas flotantes para macOS. Nativa, de código abierto y gratis, con listas de tareas, un color para cada nota y sincronización con issues de GitHub.'
+			'Notely: notas adhesivas flotantes para macOS, gratis y de código abierto. App nativa con listas de tareas, colores y sincronización con issues de GitHub.',
+		ogImageAlt:
+			'Icono de Notely junto al texto: Notas adhesivas para macOS. Nativas, de código abierto y gratis.'
 	},
 	// Section ids, so links read naturally in each language.
 	anchors: {
@@ -31,6 +33,7 @@ export const es = {
 		screenshotPending: 'Captura de pantalla próximamente'
 	},
 	positioning: {
+		heading: '¿Para qué sirve Notely?',
 		text: 'Notely no pretende ser tu app de notas definitiva. Es para lo rápido: esa idea, esa lista o ese recordatorio que quieres tener delante mientras trabajas, flotando en tu escritorio hasta que ya no lo necesites.'
 	},
 	features: {

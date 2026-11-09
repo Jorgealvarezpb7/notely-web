@@ -1,0 +1,23 @@
+# Copy this file to .github/workflows/redeploy-website.yml in the Notely app repo.
+# See docs/notely-workflow/README.md in the landing page repo for setup.
+name: Redeploy website
+
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy hook
+        env:
+          CLOUDFLARE_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$CLOUDFLARE_DEPLOY_HOOK" ]; then
+            echo "::error::CLOUDFLARE_DEPLOY_HOOK is missing. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          curl --fail-with-body --silent --show-error --request POST "$CLOUDFLARE_DEPLOY_HOOK"

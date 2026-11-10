@@ -130,7 +130,11 @@ export const es = {
 	},
 	footer: {
 		madeBy: 'Hecho por',
-		license: 'Licencia MIT'
+		license: 'Licencia MIT',
+		themeLabel: 'Tema',
+		themeLight: 'Claro',
+		themeDark: 'Oscuro',
+		themeSystem: 'Automático'
 	},
 	notFound: {
 		metaTitle: 'Página no encontrada · Notely',

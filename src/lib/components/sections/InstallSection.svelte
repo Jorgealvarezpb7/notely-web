@@ -44,7 +44,7 @@
 
 	<details class="group mt-16 rounded-card bg-surface">
 		<summary
-			class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-card p-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:p-10 [&::-webkit-details-marker]:hidden"
+			class="flex cursor-pointer list-none items-center justify-between gap-4 rounded-card p-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-text sm:p-10 [&::-webkit-details-marker]:hidden"
 		>
 			<h3 class="text-2xl font-bold tracking-tight text-heading sm:text-3xl">
 				{t.help.heading}

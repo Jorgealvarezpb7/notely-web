@@ -40,7 +40,7 @@
 				<a
 					href={link.href}
 					{...link.external ? NEW_TAB : {}}
-					class="inline-flex items-center gap-1 hover:text-accent {linkClass}"
+					class="inline-flex items-center gap-1 hover:text-accent-text {linkClass}"
 					onclick={() => (menuOpen = false)}
 				>
 					{link.label}
@@ -82,7 +82,7 @@
 			<button
 				bind:this={menuButton}
 				type="button"
-				class="rounded-lg p-2 text-heading focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:hidden"
+				class="rounded-lg p-2 text-heading focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-text sm:hidden"
 				aria-expanded={menuOpen}
 				aria-controls="menu-movil"
 				aria-label={menuOpen ? t.header.closeMenu : t.header.openMenu}

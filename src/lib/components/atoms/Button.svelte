@@ -23,7 +23,7 @@
 	};
 
 	const classes = $derived(
-		`inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${variants[variant]} ${sizes[size]}`
+		`inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-text ${variants[variant]} ${sizes[size]}`
 	);
 </script>
 

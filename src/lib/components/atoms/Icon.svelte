@@ -12,8 +12,11 @@
 	import Link from '@lucide/svelte/icons/link';
 	import ListChecks from '@lucide/svelte/icons/list-checks';
 	import Menu from '@lucide/svelte/icons/menu';
+	import Monitor from '@lucide/svelte/icons/monitor';
+	import Moon from '@lucide/svelte/icons/moon';
 	import MousePointerClick from '@lucide/svelte/icons/mouse-pointer-click';
 	import Palette from '@lucide/svelte/icons/palette';
+	import Sun from '@lucide/svelte/icons/sun';
 	import Tag from '@lucide/svelte/icons/tag';
 	import Text from '@lucide/svelte/icons/text';
 	import X from '@lucide/svelte/icons/x';
@@ -32,8 +35,11 @@
 		link: Link,
 		'list-checks': ListChecks,
 		menu: Menu,
+		monitor: Monitor,
+		moon: Moon,
 		'mouse-pointer-click': MousePointerClick,
 		palette: Palette,
+		sun: Sun,
 		tag: Tag,
 		text: Text,
 		x: X

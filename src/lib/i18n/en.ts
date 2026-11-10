@@ -129,7 +129,11 @@ export const en: Dictionary = {
 	},
 	footer: {
 		madeBy: 'Made by',
-		license: 'MIT License'
+		license: 'MIT License',
+		themeLabel: 'Theme',
+		themeLight: 'Light',
+		themeDark: 'Dark',
+		themeSystem: 'Auto'
 	},
 	notFound: {
 		metaTitle: 'Page not found · Notely',

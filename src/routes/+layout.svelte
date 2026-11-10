@@ -1,14 +1,15 @@
 <script lang="ts">
 	import '../app.css';
 	import { AUTHOR_NAME, AUTHOR_URL } from '#lib/site.ts';
-	import type { Snippet } from 'svelte';
+	import { initTheme } from '#lib/theme.svelte.ts';
+	import { onMount, type Snippet } from 'svelte';
 
 	let { children }: { children: Snippet } = $props();
+
+	onMount(initTheme);
 </script>
 
 <svelte:head>
-	<!-- Matches --bg in app.css. -->
-	<meta name="theme-color" content="#0b0b0c" />
 	<meta name="author" content={AUTHOR_NAME} />
 	<link rel="me" href={AUTHOR_URL} />
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />

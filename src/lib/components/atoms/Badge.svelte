@@ -4,6 +4,6 @@
 	let { children }: { children: Snippet } = $props();
 </script>
 
-<span class="inline-block rounded-full border border-line px-3 py-1 text-xs font-medium text-accent">
+<span class="inline-block rounded-full border border-line px-3 py-1 text-xs font-medium text-accent-text">
 	{@render children()}
 </span>

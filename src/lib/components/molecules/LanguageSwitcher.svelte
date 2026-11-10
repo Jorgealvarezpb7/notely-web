@@ -17,7 +17,7 @@
 			aria-label={LOCALE_NAMES[locale]}
 			aria-current={locale === i18n.locale ? 'page' : undefined}
 			data-sveltekit-reload
-			class="uppercase hover:text-accent {locale === i18n.locale
+			class="uppercase hover:text-accent-text {locale === i18n.locale
 				? 'font-semibold text-heading'
 				: 'text-body'}"
 		>

@@ -28,13 +28,11 @@ export const es = {
 		subtitle:
 			'Notely deja tus ideas a la vista en notas flotantes sobre el escritorio. Apunta algo rápido, dale un color y sigue con lo tuyo.',
 		download: 'Descargar para macOS',
-		requirements: 'macOS 14 o superior · Apple Silicon e Intel',
-		screenshotAlt: 'Varias notas de Notely flotando sobre el escritorio de macOS',
-		screenshotPending: 'Captura de pantalla próximamente'
+		requirements: 'macOS 14 o superior · Apple Silicon e Intel'
 	},
-	positioning: {
-		heading: '¿Para qué sirve Notely?',
-		text: 'Notely no pretende ser tu app de notas definitiva. Es para lo rápido: esa idea, esa lista o ese recordatorio que quieres tener delante mientras trabajas, flotando en tu escritorio hasta que ya no lo necesites.'
+	demo: {
+		heading: 'Notely en acción',
+		videoLabel: 'Varias notas de Notely flotando sobre el escritorio de macOS'
 	},
 	features: {
 		heading: 'Funciones',

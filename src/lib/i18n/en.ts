@@ -28,13 +28,11 @@ export const en: Dictionary = {
 		subtitle:
 			'Notely keeps your ideas in view, floating right on your desktop. Jot it down, pick a color and get back to work.',
 		download: 'Download for Mac',
-		requirements: 'macOS 14 or later · Apple silicon and Intel',
-		screenshotAlt: 'Several Notely notes floating on a macOS desktop',
-		screenshotPending: 'Screenshot coming soon'
+		requirements: 'macOS 14 or later · Apple silicon and Intel'
 	},
-	positioning: {
-		heading: 'What Notely is for',
-		text: "Notely isn't meant to replace your notes app. It's for the quick stuff: the idea, list or reminder you want in front of you while you work, right there on your desktop until you're done with it."
+	demo: {
+		heading: 'Notely in action',
+		videoLabel: 'Several Notely notes floating on a macOS desktop'
 	},
 	features: {
 		heading: 'Features',

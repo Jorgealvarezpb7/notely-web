@@ -1,4 +1,3 @@
-import { existsSync } from 'node:fs';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
@@ -14,9 +13,5 @@ export default defineConfig({
 			dynamicCompileOptions: ({ filename }) =>
 				filename.includes('node_modules') ? undefined : { runes: true }
 		})
-	],
-	define: {
-		// Checked at build time so the HTML never references a missing file.
-		__HAS_HERO_SCREENSHOT__: JSON.stringify(existsSync('static/screenshots/hero.png'))
-	}
+	]
 });

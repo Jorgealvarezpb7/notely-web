@@ -7,7 +7,6 @@
 	import Download from '@lucide/svelte/icons/download';
 	import ExternalLink from '@lucide/svelte/icons/external-link';
 	import FolderInput from '@lucide/svelte/icons/folder-input';
-	import Info from '@lucide/svelte/icons/info';
 	import Layers from '@lucide/svelte/icons/layers';
 	import Link from '@lucide/svelte/icons/link';
 	import ListChecks from '@lucide/svelte/icons/list-checks';
@@ -30,7 +29,6 @@
 		download: Download,
 		'external-link': ExternalLink,
 		'folder-input': FolderInput,
-		info: Info,
 		layers: Layers,
 		link: Link,
 		'list-checks': ListChecks,

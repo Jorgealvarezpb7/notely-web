@@ -7,7 +7,6 @@
 	import HeroSection from '#lib/components/sections/HeroSection.svelte';
 	import InstallSection from '#lib/components/sections/InstallSection.svelte';
 	import OpenSourceSection from '#lib/components/sections/OpenSourceSection.svelte';
-	import PositioningSection from '#lib/components/sections/PositioningSection.svelte';
 	import { i18n } from '#lib/i18n/index.ts';
 	import { landingSeo } from '#lib/seo.ts';
 	import type { PageProps } from './$types';
@@ -22,9 +21,8 @@
 <HeaderSection />
 <main>
 	<HeroSection version={data.release.version} />
-	<PositioningSection />
-	<FeaturesSection />
 	<DemoSection />
+	<FeaturesSection />
 	<InstallSection />
 	<OpenSourceSection />
 </main>

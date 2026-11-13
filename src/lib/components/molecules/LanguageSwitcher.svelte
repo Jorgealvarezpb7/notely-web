@@ -5,7 +5,11 @@
 	const anchor = $derived(anchorFromHash(i18n.locale, page.url.hash));
 </script>
 
-<div role="group" aria-label={i18n.t.header.languageLabel} class="flex items-center gap-1.5 text-sm">
+<div
+	role="group"
+	aria-label={i18n.t.header.languageLabel}
+	class="flex items-center gap-1.5 text-sm"
+>
 	{#each LOCALES as locale, index (locale)}
 		{#if index > 0}
 			<span class="text-body" aria-hidden="true">/</span>

@@ -79,7 +79,8 @@
 				<div class="mt-3 flex flex-wrap items-center gap-2">
 					<pre
 						class="max-w-full min-w-0 flex-1 overflow-x-auto rounded-xl border border-line bg-bg px-4 py-3 font-mono text-sm text-heading"><code
-							class="select-all">{QUARANTINE_COMMAND}</code></pre>
+							class="select-all">{QUARANTINE_COMMAND}</code
+						></pre>
 					<Button variant="secondary" size="sm" onclick={copyCommand}>
 						<Icon name={copied ? 'check' : 'copy'} size={16} />
 						<span aria-live="polite">{copied ? t.help.copied : t.help.copy}</span>

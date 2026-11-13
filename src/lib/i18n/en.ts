@@ -77,7 +77,8 @@ export const en: Dictionary = {
 		},
 		open: {
 			title: 'Open it',
-			description: 'Launch Notely from Applications. The first time you do, macOS will ask you to approve it.'
+			description:
+				'Launch Notely from Applications. The first time you do, macOS will ask you to approve it.'
 		},
 		help: {
 			heading: 'Is macOS blocking Notely?',

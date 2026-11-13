@@ -18,12 +18,12 @@ The `just` recipes wrap `bun run dev`, `bun run build` and `bun run preview`.
 
 ## Cloudflare Pages settings
 
-| Setting | Value |
-| --- | --- |
-| Build command | `bun install && bun run build` |
-| Build output directory | `build` |
-| Environment variable | `BUN_VERSION=1.4.4` |
-| Environment variable | `NODE_VERSION=24.19.0` |
+| Setting                | Value                          |
+| ---------------------- | ------------------------------ |
+| Build command          | `bun install && bun run build` |
+| Build output directory | `build`                        |
+| Environment variable   | `BUN_VERSION=1.4.4`            |
+| Environment variable   | `NODE_VERSION=24.19.0`         |
 
 `NODE_VERSION` is set because Vite runs on Node during the build, and SvelteKit 3 requires Node 22.17 or later.
 

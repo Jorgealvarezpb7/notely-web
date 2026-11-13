@@ -13,7 +13,8 @@
 	>
 		<p>
 			{t.madeBy}
-			<a href={AUTHOR_URL} {...NEW_TAB} class="text-heading hover:text-accent-text">{AUTHOR_NAME}</a>
+			<a href={AUTHOR_URL} {...NEW_TAB} class="text-heading hover:text-accent-text">{AUTHOR_NAME}</a
+			>
 		</p>
 		<div class="flex flex-wrap items-center gap-x-5 gap-y-2">
 			<a href={REPO_URL} {...NEW_TAB} class="hover:text-accent-text">GitHub</a>

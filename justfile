@@ -13,3 +13,9 @@ build:
 
 preview:
     bun run preview
+
+format:
+    bun run format
+
+lint:
+    bun run lint

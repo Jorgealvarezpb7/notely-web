@@ -24,7 +24,8 @@ export const en: Dictionary = {
 	hero: {
 		badge: 'In development',
 		iconAlt: 'Notely app icon',
-		title: 'Sticky notes for your Mac. Native, open source and free.',
+		titleLead: 'Sticky notes for your Mac.',
+		titleRest: 'Native, open source and free.',
 		subtitle:
 			'Notely keeps your ideas in view, floating right on your desktop. Jot it down, pick a color and get back to work.',
 		download: 'Download for Mac',
@@ -39,30 +40,36 @@ export const en: Dictionary = {
 		floating: {
 			title: 'Floating notes',
 			description:
-				'Every note gets its own window and picks up right where you left it: same text, same size, same spot.'
+				'Every note gets its own window and picks up right where you left it: same text, same size, same spot.',
+			imageAlt: 'Several Notely notes in different colors floating on the desktop'
 		},
 		color: {
 			title: 'Color-coded notes',
-			description: 'Give each note its own color and tell your topics apart at a glance.'
+			description: 'Give each note its own color and tell your topics apart at a glance.',
+			imageAlt: "A note's color menu: yellow, orange, pink, purple, blue, green and gray"
 		},
 		lists: {
 			title: 'To-do lists',
-			description: 'Give each list a title and check things off as you go.'
+			description: 'Give each list a title and check things off as you go.',
+			imageAlt: 'A yellow to-do list with several items, one of them crossed out'
 		},
 		markdown: {
 			title: 'Markdown descriptions',
 			description:
-				'Items linked to an issue can have a description with basic formatting: headings, lists, checkboxes and code.'
+				'Items linked to an issue can have a description with basic formatting: headings, lists, checkboxes and code.',
+			imageAlt: "An item's description with nested and numbered Markdown lists"
 		},
 		links: {
 			title: 'Link previews',
 			description:
-				"Type a URL and Notely turns it into a card with the page's title, description and image."
+				"Type a URL and Notely turns it into a card with the page's title, description and image.",
+			imageAlt: "A note with a preview card of Notely's website"
 		},
 		github: {
 			title: 'GitHub sync',
 			description:
-				'Keep your notes in sync with GitHub issues. Your token is stored in the macOS Keychain.'
+				'Keep your notes in sync with GitHub issues. Your token is stored in the macOS Keychain.',
+			imageAlt: 'A list linked to a GitHub repository, with the menu to open or unlink it'
 		}
 	},
 	install: {

@@ -27,10 +27,10 @@
 	$effect(() => () => clearTimeout(resetTimer));
 </script>
 
-<section id={i18n.t.anchors.install} class="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-32">
+<section id={i18n.t.anchors.install} class="mx-auto max-w-5xl px-4 section-y sm:px-6">
 	<h2 class="text-center text-section font-bold text-heading">{t.heading}</h2>
 
-	<ol class="mt-16 grid gap-16 lg:grid-cols-3">
+	<ol class="mt-10 grid gap-16 md:mt-12 lg:grid-cols-3">
 		<InstallStep step={1} icon="download" title={t.download.title} hasNext>
 			<p>{t.download.description}</p>
 		</InstallStep>

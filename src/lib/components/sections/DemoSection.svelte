@@ -8,7 +8,7 @@
 </script>
 
 <!-- Wider than the other sections so the laptop slightly overhangs the header content. -->
-<section class="px-4 pb-20 sm:px-6 sm:pb-32">
+<section class="px-4 section-y pt-0 sm:px-6">
 	<h2 class="sr-only">{t.heading}</h2>
 	<div class="relative mx-auto max-w-6xl">
 		<video

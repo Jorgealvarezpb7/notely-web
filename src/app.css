@@ -26,6 +26,8 @@
 	--glow-primary: rgb(1 179 108 / 0.24);
 	--glow-secondary: rgb(10 132 255 / 0.1);
 	--app-icon-shadow: 0 18px 45px rgb(0 0 0 / 0.55);
+	--feature-glow-alpha: 0.16;
+	--feature-shot-shadow: drop-shadow(0 24px 40px rgb(0 0 0 / 0.6));
 	--app-icon-fill: #000000;
 }
 
@@ -50,6 +52,8 @@
 	--glow-primary: rgb(1 179 108 / 0.5);
 	--glow-secondary: rgb(10 132 255 / 0.22);
 	--app-icon-shadow: 0 18px 45px rgb(0 0 0 / 0.2);
+	--feature-glow-alpha: 0.14;
+	--feature-shot-shadow: drop-shadow(0 20px 32px rgb(0 0 0 / 0.22));
 }
 
 /* For one-off overrides; components should keep using the tokens. */
@@ -80,7 +84,8 @@ html:not([data-theme]) [data-theme-switcher] {
 		-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
 	--font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-	--text-hero: clamp(2.5rem, 1.25rem + 5.5vw, 5rem);
+	/* Small enough that each hero title line fits on one line from md up. */
+	--text-hero: clamp(2.25rem, 0.5rem + 4.5vw, 3.5rem);
 	--text-hero--line-height: 1.05;
 	--text-hero--letter-spacing: -0.03em;
 	--text-section: clamp(2rem, 1.5rem + 2.25vw, 3rem);
@@ -88,6 +93,15 @@ html:not([data-theme]) [data-theme-switcher] {
 	--text-section--letter-spacing: -0.025em;
 
 	--radius-card: 2rem;
+}
+
+/* Vertical padding for landing sections; two adjacent sections add up to the gap between them. */
+@utility section-y {
+	padding-block: 3.5rem;
+
+	@variant md {
+		padding-block: 5rem;
+	}
 }
 
 html {

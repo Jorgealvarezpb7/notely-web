@@ -18,8 +18,9 @@
 	<span class="app-icon mx-auto mt-8 size-40 sm:size-48">
 		<img src="/logo-384.png" alt={t.iconAlt} width="192" height="192" />
 	</span>
-	<h1 class="mx-auto mt-10 max-w-4xl text-hero font-bold text-heading">
-		{t.title}
+	<h1 class="mx-auto mt-10 max-w-5xl text-hero font-bold text-balance text-heading">
+		<span class="block">{t.titleLead}</span>
+		<span class="block text-body">{t.titleRest}</span>
 	</h1>
 	<p class="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-body sm:text-2xl">
 		{t.subtitle}

@@ -24,7 +24,8 @@ export const es = {
 	hero: {
 		badge: 'En desarrollo',
 		iconAlt: 'Icono de Notely',
-		title: 'Notas adhesivas para macOS: nativas, de código abierto y gratis.',
+		titleLead: 'Notas adhesivas para macOS.',
+		titleRest: 'Nativas, de código abierto y gratis.',
 		subtitle:
 			'Notely deja tus ideas a la vista en notas flotantes sobre el escritorio. Apunta algo rápido, dale un color y sigue con lo tuyo.',
 		download: 'Descargar para macOS',
@@ -39,30 +40,37 @@ export const es = {
 		floating: {
 			title: 'Notas flotantes',
 			description:
-				'Cada nota vive en su propia ventana y recuerda su texto, su tamaño y su posición entre sesiones.'
+				'Cada nota vive en su propia ventana y recuerda su texto, su tamaño y su posición entre sesiones.',
+			imageAlt: 'Varias notas de Notely de distintos colores flotando sobre el escritorio'
 		},
 		color: {
 			title: 'Un color para cada nota',
-			description: 'Elige el tono de cada nota para distinguir tus temas de un vistazo.'
+			description: 'Elige el tono de cada nota para distinguir tus temas de un vistazo.',
+			imageAlt: 'Menú de colores de una nota: amarillo, naranja, rosa, morado, azul, verde y gris'
 		},
 		lists: {
 			title: 'Listas de tareas',
-			description: 'Crea listas con su propio título y marca cada elemento cuando lo termines.'
+			description: 'Crea listas con su propio título y marca cada elemento cuando lo termines.',
+			imageAlt: 'Una lista de tareas amarilla con varios elementos y uno tachado'
 		},
 		markdown: {
 			title: 'Descripciones en Markdown',
 			description:
-				'Añade a los elementos enlazados con un issue una descripción con formato básico: títulos, listas, casillas y código.'
+				'Añade a los elementos enlazados con un issue una descripción con formato básico: títulos, listas, casillas y código.',
+			imageAlt: 'La descripción de un elemento con listas anidadas y numeradas en Markdown'
 		},
 		links: {
 			title: 'Enlaces con vista previa',
 			description:
-				'Escribe una dirección web y Notely muestra una tarjeta con el título, la descripción y la imagen de la página.'
+				'Escribe una dirección web y Notely muestra una tarjeta con el título, la descripción y la imagen de la página.',
+			imageAlt: 'Una nota con una tarjeta de vista previa de la web de Notely'
 		},
 		github: {
 			title: 'Sincronización con GitHub',
 			description:
-				'Mantén tus notas sincronizadas con issues de GitHub. Tu token se guarda en el Llavero de macOS.'
+				'Mantén tus notas sincronizadas con issues de GitHub. Tu token se guarda en el Llavero de macOS.',
+			imageAlt:
+				'Una lista enlazada a un repositorio de GitHub, con el menú para abrirlo o desvincularlo'
 		}
 	},
 	install: {
